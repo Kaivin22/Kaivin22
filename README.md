@@ -29,9 +29,6 @@
 
   <div align="left">
 
-I am passionate about technology, especially in software development. I enjoy learning, exploring new knowledge, 
-and actively contributing to open-source projects for the community.
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Kaivin22/Kaivin22/output/pacman-contribution-graph-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Kaivin22/Kaivin22/output/pacman-contribution-graph.svg">
@@ -44,24 +41,14 @@ and actively contributing to open-source projects for the community.
 
 <h2>📚 Language and Tools</h2>
 <p align="left">
-  <img src="https://github.com/devicons/devicon/blob/master/icons/spring/spring-original.svg" alt="spring" width="40" height="40"/> 
-  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" alt="git" width="40" height="40"/> 
-  <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/>
-  <img src="https://github.com/gilbarbara/logos/blob/main/logos/reactivex.svg" alt="RxJava" width="40" height="40"/> 
-  <img src="https://github.com/devicons/devicon/blob/master/icons/maven/maven-original.svg" alt="maven" width="40" height="40"/>
   <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original.svg" alt="java" width="40" height="40"/> 
-  <img src="https://github.com/devicons/devicon/blob/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/> 
-  <img src="https://github.com/devicons/devicon/blob/master/icons/android/android-plain-wordmark.svg" alt="android" width="40" height="40"/> 
-  <img src="https://github.com/devicons/devicon/blob/master/icons/postman/postman-original.svg" alt="postman" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/apachekafka/apachekafka-original.svg" alt="apache_kafka" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" alt="docker" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/jenkins/jenkins-original.svg" alt="jenkins" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/redis/redis-original.svg" alt="redis" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/kubernetes/kubernetes-original.svg" alt="kubernetes" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/rabbitmq/rabbitmq-original.svg" alt="rabbitmq" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/oracle/oracle-original.svg" alt="oracle" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original.svg" alt="postgre" width="40" height="40">
+  <img src="https://github.com/devicons/devicon/blob/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="react" width="40" height="40"/> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" alt="git" width="40" height="40"/> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="40" height="40"/>
 </p>
 
 
@@ -77,8 +64,6 @@ and actively contributing to open-source projects for the community.
 
 ![Header](img/header_.png)
 
-![KAIVIN22](gitartwork.svg)
-
 ![Grid-Snake](https://raw.githubusercontent.com/Kaivin22/Kaivin22/main/dist/grid-snake.svg)
 
 <picture>
@@ -90,31 +75,15 @@ and actively contributing to open-source projects for the community.
 
  <h3 align="left"> 📚 Languages and Tools </h3>
 <p align="left">
-  <img src="https://img.shields.io/badge/Python-snow?logo=python&logoColor=3776AB" alt="" />
   <img src="https://img.shields.io/badge/Java-snow?logo=coffeescript&logoColor=FC4C02" alt="" />
-  <img src="https://img.shields.io/badge/C%2B%2B-snow?logo=c%2B%2B&logoColor=00599C" alt="" />
-  <img src="https://img.shields.io/badge/C-snow?logo=c&logoColor=A8B9CC" alt="" />
-  <img src="https://img.shields.io/badge/C%23-snow?logo=csharp&logoColor=512BD4" alt="" />
-  <img src="https://img.shields.io/badge/JavaScript-snow?logo=javascript&logoColor=E9CE30" alt="" />
-  <img src="https://img.shields.io/badge/Go-snow?logo=go&logoColor=00ADD8" alt="" />
-  <img src="https://img.shields.io/badge/Swift-snow?logo=swift&logoColor=F05138" alt="" />
-  <img src="https://img.shields.io/badge/Rust-snow?logo=rust&logoColor=000000" alt="" />
-  <img src="https://img.shields.io/badge/Ruby-snow?logo=ruby&logoColor=CC342D" alt="" />
-  <img src="https://img.shields.io/badge/Kotlin-snow?logo=kotlin&logoColor=7F52FF" alt="" />
   <img src="https://img.shields.io/badge/TypeScript-snow?logo=typescript&logoColor=3178C6" alt="" />
-  <img src="https://img.shields.io/badge/Dart-snow?logo=dart&logoColor=0175C2" alt="" />
+  <img src="https://img.shields.io/badge/JavaScript-snow?logo=javascript&logoColor=E9CE30" alt="" />
+  <img src="https://img.shields.io/badge/Python-snow?logo=python&logoColor=3776AB" alt="" />
+  <img src="https://img.shields.io/badge/C%23-snow?logo=csharp&logoColor=512BD4" alt="" />
+  <img src="https://img.shields.io/badge/React-snow?logo=react&logoColor=61DAFB" alt="" />
 </p>
 
-<h3>🔥 Streak Stats</h3>
 
-  <!-- GitHub Readme Streak Stats - https://github.com/DenverCoder1/github-readme-streak-stats -->
-  <p>
-    <a href="https://github.com/Kaivin22/github-readme-streak-stats">
-      <img title="🔥 Get streak stats for your profile at git.io/streak-stats" alt="Kaivin22's streak" src="https://streak-stats.demolab.com/?user=Kaivin22&theme=monokai-metallian&hide_border=true"/>
-      <img src="https://i.ibb.co/N366vtQ/hoangtien2k3.png" alt="Kaivin22" width="200px">
-    </a>
-    <p>🔥 Get streak stats for your profile at <a href="https://github.com/Kaivin22">github.com/Kaivin22</a></p>
-  </p>
 
 <h3>💻💬 GitHub Profile Stats</h3>
 
@@ -163,7 +132,7 @@ or skill level.
   <img src="http://iot.fbiego.com/api/v1/commits?user=Kaivin22&country=VietNam_Private&bg_color=293035&text_color=fafafa&border_color=293035">
   </a>
 
-  <p><a href="https://github.com/Kaivin22"><img src="https://github.com/Kaivin22/Kaivin22/blob/main/profile-3d-contrib/profile-night-rainbow.svg" alt="@Kaivin22's GitHub"></a></p>
+  <p><a href="https://github.com/Kaivin22"><img src="https://github.com/Kaivin22/Kaivin22/blob/main/profile-3d-contrib/profile-night-green.svg" alt="@Kaivin22's GitHub"></a></p>
 
 
 <div align="center">
