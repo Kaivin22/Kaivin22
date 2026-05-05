@@ -46,9 +46,16 @@
   <img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/>
   <img src="https://github.com/devicons/devicon/blob/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> 
   <img src="https://github.com/devicons/devicon/blob/master/icons/csharp/csharp-original.svg" alt="csharp" width="40" height="40"/>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="react" width="40" height="40"/> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/django/django-plain.svg" alt="django" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/xamarin/xamarin-original.svg" alt="xamarin" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/androidstudio/androidstudio-original.svg" alt="android_studio" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original.svg" alt="react_native" width="40" height="40"/> 
+  <img src="https://github.com/devicons/devicon/blob/master/icons/magento/magento-original.svg" alt="magento" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/eclipse/eclipse-original.svg" alt="eclipse" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original.svg" alt="mysql" width="40" height="40"/>
   <img src="https://github.com/devicons/devicon/blob/master/icons/git/git-original.svg" alt="git" width="40" height="40"/> 
-  <img src="https://github.com/devicons/devicon/blob/master/icons/nodejs/nodejs-original.svg" alt="nodejs" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/linux/linux-original.svg" alt="linux" width="40" height="40"/>
+  <img src="https://github.com/devicons/devicon/blob/master/icons/docker/docker-original.svg" alt="docker" width="40" height="40"/>
 </p>
 
 
@@ -80,7 +87,15 @@
   <img src="https://img.shields.io/badge/JavaScript-snow?logo=javascript&logoColor=E9CE30" alt="" />
   <img src="https://img.shields.io/badge/Python-snow?logo=python&logoColor=3776AB" alt="" />
   <img src="https://img.shields.io/badge/C%23-snow?logo=csharp&logoColor=512BD4" alt="" />
-  <img src="https://img.shields.io/badge/React-snow?logo=react&logoColor=61DAFB" alt="" />
+  <img src="https://img.shields.io/badge/Django-snow?logo=django&logoColor=092E20" alt="" />
+  <img src="https://img.shields.io/badge/Xamarin-snow?logo=xamarin&logoColor=3498DB" alt="" />
+  <img src="https://img.shields.io/badge/Android%20Studio-snow?logo=android-studio&logoColor=3DDC84" alt="" />
+  <img src="https://img.shields.io/badge/React%20Native-snow?logo=react&logoColor=61DAFB" alt="" />
+  <img src="https://img.shields.io/badge/Magento-snow?logo=magento&logoColor=EE6723" alt="" />
+  <img src="https://img.shields.io/badge/Eclipse-snow?logo=eclipse-ide&logoColor=2C2255" alt="" />
+  <img src="https://img.shields.io/badge/MySQL-snow?logo=mysql&logoColor=4479A1" alt="" />
+  <img src="https://img.shields.io/badge/Linux-snow?logo=linux&logoColor=FCC624" alt="" />
+  <img src="https://img.shields.io/badge/Docker-snow?logo=docker&logoColor=2496ED" alt="" />
 </p>
 
 
