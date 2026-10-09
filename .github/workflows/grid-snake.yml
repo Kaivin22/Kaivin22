@@ -1,12 +1,8 @@
 name: Grid snake
 
+# Legacy artwork is retained for manual use; the terminal profile uses local SVGs.
 on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-  schedule:
-    - cron: '0 */2 * * *'
+  workflow_dispatch:
 
 jobs:
   build:

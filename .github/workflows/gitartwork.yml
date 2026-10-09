@@ -1,9 +1,7 @@
-on: 
-  push:
-  pull_request:
-  schedule:
-    - cron: "0 */4 * * *"
-  workflow_dispatch:  
+# Legacy artwork is retained for manual use; the terminal profile uses local SVGs.
+on:
+  workflow_dispatch:
+
 jobs:
   build:
     name: Make gitartwork SVG

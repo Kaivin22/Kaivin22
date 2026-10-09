@@ -1,0 +1,53 @@
+name: Build terminal profile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - profile.json
+      - scripts/build_profile.py
+      - .github/workflows/profile.yml
+  pull_request:
+    paths:
+      - profile.json
+      - scripts/build_profile.py
+      - assets/profile-terminal*.svg
+      - README.md
+      - .github/workflows/profile.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: terminal-profile-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/build_profile.py --check
+
+  build:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate profile
+        run: python3 scripts/build_profile.py
+      - name: Commit generated files
+        run: |
+          git add README.md assets/profile-terminal.svg assets/profile-terminal-mobile.svg
+          if git diff --cached --quiet; then
+            echo "Profile is already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Update terminal profile [skip ci]"
+          git push

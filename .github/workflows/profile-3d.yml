@@ -1,8 +1,7 @@
 name: GitHub-Profile-3D-Contrib
 
+# Legacy artwork is retained for manual use; the terminal profile uses local SVGs.
 on:
-  schedule:
-    - cron: "0 2 * * *"
   workflow_dispatch:
 
 jobs:

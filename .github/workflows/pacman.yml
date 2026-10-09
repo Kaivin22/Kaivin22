@@ -1,14 +1,8 @@
 name: Generate pacman animation
 
+# Legacy artwork is retained for manual use; the terminal profile uses local SVGs.
 on:
-  schedule: # execute every 12 hours
-    - cron: "* */12 * * *"
-
   workflow_dispatch:
-
-  push:
-    branches:
-    - main
 
 jobs:
   generate:

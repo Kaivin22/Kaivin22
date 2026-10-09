@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="919" viewBox="0 0 480 919" role="img" aria-labelledby="title description">
+<title id="title">Nguyễn Văn Tuấn | Backend developer</title>
+<desc id="description">Terminal profile with a K22 ASCII monogram. Name: Nguyễn Văn Tuấn. Role: Backend developer. Location: Vietnam. Languages: Java / Python / C#. : TypeScript / JavaScript. Backend: Django / MySQL. Tools: Docker / Linux / Git. GitHub: github.com/Kaivin22</desc>
+<rect width="480" height="919" rx="16" fill="#080a0d"/>
+<rect x="12" y="12" width="456" height="895" rx="12" fill="#0f1317" stroke="#2a343e"/>
+<path d="M24 12H456Q468 12 468 24V66H12V24Q12 12 24 12Z" fill="#1b232b"/>
+<path d="M12 66H468" stroke="#2a343e"/>
+<g font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+<circle cx="37" cy="39" r="6" fill="#cc6b63"/>
+<circle cx="59" cy="39" r="6" fill="#e0b66e"/>
+<circle cx="81" cy="39" r="6" fill="#87ad8a"/>
+<text x="240.0" y="44" fill="#a3adb7" font-size="14" font-weight="400" text-anchor="middle">kaivin22 — ~/profile</text>
+<text x="445" y="44" fill="#a3adb7" font-size="12" font-weight="400" text-anchor="end">UTF-8</text>
+<text x="40" y="109" fill="#9ec4a8" font-size="17" font-weight="600" >kaivin22@github</text>
+<text x="40" y="139" fill="#e9e6df" font-size="17" font-weight="400" >$ ./asciifetch --profile</text>
+<text x="46" y="207" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####      ####        ##########          ##########  </text>
+<text x="46" y="216" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####      ####        ##########          ##########  </text>
+<text x="46" y="225" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####      ####      ####      ####</text>
+<text x="46" y="234" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####      ####      ####      ####</text>
+<text x="46" y="243" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####  ####                    ####                ####</text>
+<text x="46" y="252" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####  ####                    ####                ####</text>
+<text x="46" y="261" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">########                  ######              ######  </text>
+<text x="46" y="270" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">########                  ######              ######  </text>
+<text x="46" y="279" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####  ####            ######              ######      </text>
+<text x="46" y="288" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####  ####            ######              ######      </text>
+<text x="46" y="297" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####                ####          </text>
+<text x="46" y="306" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####                ####          </text>
+<text x="46" y="315" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####      ####      ##############      ##############</text>
+<text x="46" y="324" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####      ####      ##############      ##############</text>
+<text x="240" y="369" fill="#e9e6df" font-size="15" font-weight="600" text-anchor="middle">K A I V I N 2 2</text>
+<text x="240" y="394" fill="#a3adb7" font-size="11" font-weight="400" text-anchor="middle">BACKEND DEVELOPER</text>
+<path d="M40 413H440" stroke="#2a343e"/>
+<text x="40" y="444" fill="#eca35f" font-size="17" font-weight="600" >Name</text>
+<text x="145" y="444" fill="#e9e6df" font-size="17" font-weight="400" >Nguyễn Văn Tuấn</text>
+<text x="40" y="477" fill="#eca35f" font-size="17" font-weight="600" >Role</text>
+<text x="145" y="477" fill="#e9e6df" font-size="17" font-weight="400" >Backend developer</text>
+<text x="40" y="510" fill="#eca35f" font-size="17" font-weight="600" >Location</text>
+<text x="145" y="510" fill="#e9e6df" font-size="17" font-weight="400" >Vietnam</text>
+<text x="40" y="576" fill="#eca35f" font-size="17" font-weight="600" >Languages</text>
+<text x="145" y="576" fill="#e9e6df" font-size="17" font-weight="400" >Java / Python / C#</text>
+<text x="40" y="609" fill="#eca35f" font-size="17" font-weight="600" ></text>
+<text x="145" y="609" fill="#e9e6df" font-size="17" font-weight="400" >TypeScript / JavaScript</text>
+<text x="40" y="642" fill="#eca35f" font-size="17" font-weight="600" >Backend</text>
+<text x="145" y="642" fill="#e9e6df" font-size="17" font-weight="400" >Django / MySQL</text>
+<text x="40" y="675" fill="#eca35f" font-size="17" font-weight="600" >Tools</text>
+<text x="145" y="675" fill="#e9e6df" font-size="17" font-weight="400" >Docker / Linux / Git</text>
+<text x="40" y="741" fill="#eca35f" font-size="17" font-weight="600" >GitHub</text>
+<text x="145" y="741" fill="#e9e6df" font-size="17" font-weight="400" >github.com/Kaivin22</text>
+<rect x="40" y="778" width="27" height="16" fill="#1b232b"/>
+<rect x="67" y="778" width="27" height="16" fill="#cc6b63"/>
+<rect x="94" y="778" width="27" height="16" fill="#87ad8a"/>
+<rect x="121" y="778" width="27" height="16" fill="#e0b66e"/>
+<rect x="148" y="778" width="27" height="16" fill="#7aa5c4"/>
+<rect x="175" y="778" width="27" height="16" fill="#b59ac4"/>
+<rect x="202" y="778" width="27" height="16" fill="#7fc4bc"/>
+<rect x="229" y="778" width="27" height="16" fill="#e9e6df"/>
+<path d="M40 842H440" stroke="#2a343e"/>
+<text x="40" y="876" fill="#9ec4a8" font-size="18" font-weight="600" >$</text>
+<text x="64" y="876" fill="#a3adb7" font-size="16" font-weight="400" >Thanks for stopping by.</text>
+<rect x="306" y="861" width="9" height="19" fill="#eca35f"/>
+<text x="440" y="876" fill="#9ec4a8" font-size="13" font-weight="400" text-anchor="end">[ exit 0 ]</text>
+</g>
+</svg>

@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="686" viewBox="0 0 1200 686" role="img" aria-labelledby="title description">
+<title id="title">Nguyễn Văn Tuấn | Backend developer</title>
+<desc id="description">Terminal profile with a K22 ASCII monogram. Name: Nguyễn Văn Tuấn. Role: Backend developer. Location: Vietnam. Languages: Java / Python / C#. : TypeScript / JavaScript. Backend: Django / MySQL. Tools: Docker / Linux / Git. GitHub: github.com/Kaivin22</desc>
+<rect width="1200" height="686" rx="16" fill="#080a0d"/>
+<rect x="12" y="12" width="1176" height="662" rx="12" fill="#0f1317" stroke="#2a343e"/>
+<path d="M24 12H1176Q1188 12 1188 24V66H12V24Q12 12 24 12Z" fill="#1b232b"/>
+<path d="M12 66H1188" stroke="#2a343e"/>
+<g font-family="'SFMono-Regular',Consolas,'Liberation Mono',monospace">
+<circle cx="37" cy="39" r="6" fill="#cc6b63"/>
+<circle cx="59" cy="39" r="6" fill="#e0b66e"/>
+<circle cx="81" cy="39" r="6" fill="#87ad8a"/>
+<text x="600.0" y="44" fill="#a3adb7" font-size="14" font-weight="400" text-anchor="middle">kaivin22 — ~/profile</text>
+<text x="1165" y="44" fill="#a3adb7" font-size="12" font-weight="400" text-anchor="end">UTF-8</text>
+<text x="40" y="109" fill="#9ec4a8" font-size="17" font-weight="600" >kaivin22@github</text>
+<text x="40" y="139" fill="#e9e6df" font-size="17" font-weight="400" >$ ./asciifetch --profile</text>
+<text x="92" y="263" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####      ####        ##########          ##########  </text>
+<text x="92" y="272" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####      ####        ##########          ##########  </text>
+<text x="92" y="281" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####      ####      ####      ####</text>
+<text x="92" y="290" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####      ####      ####      ####</text>
+<text x="92" y="299" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####  ####                    ####                ####</text>
+<text x="92" y="308" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####  ####                    ####                ####</text>
+<text x="92" y="317" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">########                  ######              ######  </text>
+<text x="92" y="326" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">########                  ######              ######  </text>
+<text x="92" y="335" fill="#eca35f" font-size="12" font-weight="600" xml:space="preserve">####  ####            ######              ######      </text>
+<text x="92" y="344" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####  ####            ######              ######      </text>
+<text x="92" y="353" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####                ####          </text>
+<text x="92" y="362" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####    ####        ####                ####          </text>
+<text x="92" y="371" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####      ####      ##############      ##############</text>
+<text x="92" y="380" fill="#b77c49" font-size="12" font-weight="600" xml:space="preserve">####      ####      ##############      ##############</text>
+<text x="286" y="425" fill="#e9e6df" font-size="15" font-weight="600" text-anchor="middle">K A I V I N 2 2</text>
+<text x="286" y="450" fill="#a3adb7" font-size="11" font-weight="400" text-anchor="middle">BACKEND DEVELOPER</text>
+<path d="M558 183V546" stroke="#2a343e" stroke-dasharray="3 7"/>
+<text x="600" y="186" fill="#eca35f" font-size="20" font-weight="600" >kaivin22@github</text>
+<text x="600" y="221" fill="#eca35f" font-size="17" font-weight="600" >Name</text>
+<text x="719" y="221" fill="#e9e6df" font-size="17" font-weight="400" >Nguyễn Văn Tuấn</text>
+<text x="600" y="253" fill="#eca35f" font-size="17" font-weight="600" >Role</text>
+<text x="719" y="253" fill="#e9e6df" font-size="17" font-weight="400" >Backend developer</text>
+<text x="600" y="285" fill="#eca35f" font-size="17" font-weight="600" >Location</text>
+<text x="719" y="285" fill="#e9e6df" font-size="17" font-weight="400" >Vietnam</text>
+<text x="600" y="349" fill="#eca35f" font-size="17" font-weight="600" >Languages</text>
+<text x="719" y="349" fill="#e9e6df" font-size="17" font-weight="400" >Java / Python / C#</text>
+<text x="600" y="381" fill="#eca35f" font-size="17" font-weight="600" ></text>
+<text x="719" y="381" fill="#e9e6df" font-size="17" font-weight="400" >TypeScript / JavaScript</text>
+<text x="600" y="413" fill="#eca35f" font-size="17" font-weight="600" >Backend</text>
+<text x="719" y="413" fill="#e9e6df" font-size="17" font-weight="400" >Django / MySQL</text>
+<text x="600" y="445" fill="#eca35f" font-size="17" font-weight="600" >Tools</text>
+<text x="719" y="445" fill="#e9e6df" font-size="17" font-weight="400" >Docker / Linux / Git</text>
+<text x="600" y="509" fill="#eca35f" font-size="17" font-weight="600" >GitHub</text>
+<text x="719" y="509" fill="#e9e6df" font-size="17" font-weight="400" >github.com/Kaivin22</text>
+<rect x="600" y="545" width="27" height="16" fill="#1b232b"/>
+<rect x="627" y="545" width="27" height="16" fill="#cc6b63"/>
+<rect x="654" y="545" width="27" height="16" fill="#87ad8a"/>
+<rect x="681" y="545" width="27" height="16" fill="#e0b66e"/>
+<rect x="708" y="545" width="27" height="16" fill="#7aa5c4"/>
+<rect x="735" y="545" width="27" height="16" fill="#b59ac4"/>
+<rect x="762" y="545" width="27" height="16" fill="#7fc4bc"/>
+<rect x="789" y="545" width="27" height="16" fill="#e9e6df"/>
+<path d="M40 609H1160" stroke="#2a343e"/>
+<text x="40" y="643" fill="#9ec4a8" font-size="18" font-weight="600" >$</text>
+<text x="64" y="643" fill="#a3adb7" font-size="16" font-weight="400" >Thanks for stopping by.</text>
+<rect x="306" y="628" width="9" height="19" fill="#eca35f"/>
+<text x="1160" y="643" fill="#9ec4a8" font-size="13" font-weight="400" text-anchor="end">[ exit 0 ]</text>
+</g>
+</svg>

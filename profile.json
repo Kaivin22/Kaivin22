@@ -1,0 +1,31 @@
+{
+  "username": "Kaivin22",
+  "name": "Nguyễn Văn Tuấn",
+  "role": "Backend developer",
+  "location": "Vietnam",
+  "intro": "Hi, I'm Tuấn. My work centers on backend development, with a toolkit that spans web, mobile, and infrastructure.",
+  "fields": [
+    ["Languages", "Java / Python / C#"],
+    ["", "TypeScript / JavaScript"],
+    ["Backend", "Django / MySQL"],
+    ["Tools", "Docker / Linux / Git"]
+  ],
+  "stack": [
+    ["languages", "Java · Python · C# · TypeScript · JavaScript"],
+    ["backend", "Django · MySQL · Magento"],
+    ["mobile", "React Native · Xamarin"],
+    ["environment", "Docker · Linux · Git"],
+    ["editors", "Android Studio · Eclipse"]
+  ],
+  "palette": {
+    "canvas": "#080a0d",
+    "background": "#0f1317",
+    "bar": "#1b232b",
+    "border": "#2a343e",
+    "text": "#e9e6df",
+    "muted": "#a3adb7",
+    "accent": "#eca35f",
+    "green": "#9ec4a8",
+    "blue": "#7aa5c4"
+  }
+}
