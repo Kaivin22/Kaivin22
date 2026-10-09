@@ -2,7 +2,7 @@
 
 <picture>
   <source media="(max-width: 640px)" srcset="assets/profile-terminal-mobile.svg">
-  <img src="assets/profile-terminal.svg" width="100%" alt="Nguyễn Văn Tuấn (Kaivin22) — Backend developer in Vietnam. Terminal profile with a K22 ASCII monogram; skills and links below.">
+  <img src="assets/profile-terminal.svg" width="100%" alt="Nguyễn Văn Tuấn (Kaivin22) — Backend developer in Vietnam. ASCII portrait of an orange cat with a bouquet, drawn from my avatar. Skills and links below.">
 </picture>
 
 <p align="center">

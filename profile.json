@@ -3,6 +3,11 @@
   "name": "Nguyễn Văn Tuấn",
   "role": "Backend developer",
   "location": "Vietnam",
+  "portrait": {
+    "src": "assets/avatar.jpg",
+    "columns": 80,
+    "description": "ASCII portrait of an orange cat with a bouquet, drawn from my avatar."
+  },
   "intro": "Hi, I'm Tuấn. My work centers on backend development, with a toolkit that spans web, mobile, and infrastructure.",
   "fields": [
     ["Languages", "Java / Python / C#"],

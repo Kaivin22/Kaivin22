@@ -1,10 +1,10 @@
 # Chỉnh sửa GitHub profile
 
-Profile dùng cửa sổ terminal nền tối, monogram ASCII `K22` và bảng thông tin
+Profile dùng cửa sổ terminal nền tối, ảnh avatar được vẽ bằng ký tự ASCII và bảng thông tin
 lấy cảm hứng từ [ganji759/asciifetch](https://github.com/ganji759/asciifetch).
-SVG được tạo bằng mã trong repository; không cần API ảnh, font tải từ mạng
-hay cài thư viện Python. Đây là bản thiết kế tùy biến, không phải đầu ra của
-công cụ chuyển ảnh chân dung asciifetch.
+SVG được tạo bằng mã trong repository và Pillow; không cần API ảnh hay font tải từ mạng.
+Đây là bộ dựng SVG tùy biến lấy cảm hứng từ asciifetch. Mỗi ký tự và màu sắc
+được tính từ ảnh gốc `assets/avatar.jpg`, không dùng chữ thay thế cho ảnh.
 
 ## Đổi nội dung
 
@@ -14,25 +14,38 @@ công cụ chuyển ảnh chân dung asciifetch.
 2. Chạy từ thư mục repository với Python 3.9 trở lên:
 
    ```sh
+   python -m pip install -r requirements.txt
    python scripts/build_profile.py
    python scripts/build_profile.py --check
    ```
 
-3. Commit `profile.json`, `README.md` và hai file SVG trong `assets/`, rồi
+3. Commit cấu hình, ảnh nguồn, `README.md` và hai file SVG trong `assets/`, rồi
    push lên repository `Kaivin22/Kaivin22` để GitHub hiển thị bản mới.
 
 Không sửa trực tiếp `README.md` hoặc SVG: lần build tiếp theo sẽ ghi đè.
-Đổi bố cục hoặc monogram trong `scripts/build_profile.py`.
+Đổi bố cục trong `scripts/build_profile.py`.
+
+## Đổi ảnh ASCII
+
+Thay `assets/avatar.jpg` bằng ảnh mới rồi chạy lại lệnh build. Có thể dùng PNG
+bằng cách đổi `portrait.src` trong `profile.json` và commit file ảnh tương ứng.
+Ảnh sẽ được căn giữa và cắt vuông; nên chuẩn bị avatar vuông với chủ thể rõ nét.
+Ảnh hiện tại là ảnh mèo cam cầm hoa do chủ profile cung cấp.
+
+`portrait.columns` điều chỉnh độ chi tiết (40–120 cột; mặc định 80). Script
+giữ đúng tỷ lệ hình khi chuyển sang ô ký tự, hỗ trợ hướng ảnh EXIF và nền trong suốt.
+Cập nhật `portrait.description` nếu đổi chủ thể trong ảnh để văn bản thay thế vẫn đúng.
+Ảnh nguồn được lưu trong repository để build trên máy và GitHub tạo cùng kết quả.
 
 ## Tự động cập nhật
 
-Workflow `Build terminal profile` chạy khi cấu hình hoặc script thay đổi trên
+Workflow `Build terminal profile` chạy khi ảnh nguồn, cấu hình, script hoặc dependencies thay đổi trên
 `main`, hoặc khi được chạy thủ công trong tab Actions. Workflow build rồi commit
 các file đầu ra nếu có thay đổi. Pull request chỉ kiểm tra bản build đã cập nhật.
 Nếu repository chặn bot ghi vào `main`, chạy hai lệnh trên và commit thủ công.
 
 Repository chỉ dùng workflow `Build terminal profile` và hai SVG được tạo từ
-`profile.json`. Không cần token của dịch vụ ảnh hay thư viện bên ngoài.
+`profile.json` cùng ảnh nguồn. Workflow tự cài Pillow từ `requirements.txt`.
 
 ## Cấu trúc repository
 
@@ -41,17 +54,19 @@ Repository chỉ dùng workflow `Build terminal profile` và hai SVG được t�
   CODEOWNERS
   workflows/profile.yml
 assets/
+  avatar.jpg
   profile-terminal.svg
   profile-terminal-mobile.svg
 docs/PROFILE.md
 scripts/build_profile.py
 profile.json
+requirements.txt
 README.md
 LICENSE
 ```
 
 `CODEOWNERS` thuộc tài khoản `Kaivin22`. Toàn bộ thông tin hiển thị được cấu hình
-trong `profile.json`; monogram ASCII `K22` nằm trong script dựng SVG.
+trong `profile.json`; ảnh ASCII được tính từ ảnh nguồn trong `assets/`.
 
 ## Hiển thị
 

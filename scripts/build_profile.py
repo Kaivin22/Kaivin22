@@ -1,4 +1,4 @@
-"""Build a self-contained terminal profile. Python 3.9+, no dependencies.
+"""Build a terminal profile from a local avatar. Python 3.9+ and Pillow.
 
 Layout inspired by https://github.com/ganji759/asciifetch.
 This is an original SVG renderer, not the upstream portrait converter.
@@ -12,22 +12,74 @@ import re
 import sys
 import textwrap
 
+from PIL import Image, ImageOps
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FONT = "'SFMono-Regular',Consolas,'Liberation Mono',monospace"
-GLYPHS = {
-    "K": ["##   ##", "##  ## ", "## ##  ", "####   ", "## ##  ", "##  ## ", "##   ##"],
-    "2": [" ##### ", "##   ##", "     ##", "   ### ", " ###   ", "##     ", "#######"],
-}
+ASCII_RAMP = ".,:;irsXA253hMHGS#9B&@"
 
 
-def ascii_mark():
-    """An original K22 monogram, built from a character grid."""
+def load_portrait(profile):
+    """Read the actual avatar and map its light and color to ASCII cells."""
+    config = profile["portrait"]
+    source = (ROOT / config["src"]).resolve()
+    if ROOT.resolve() not in source.parents:
+        raise ValueError("portrait.src must point to a file inside the repository")
+    if not source.is_file():
+        raise ValueError(f"Avatar not found: {config['src']}. Add your image before building.")
+    columns = config.get("columns", 80)
+    if not isinstance(columns, int) or not 40 <= columns <= 120:
+        raise ValueError("portrait.columns must be an integer between 40 and 120")
+    # A monospace cell is roughly twice as tall as it is wide.
+    row_count = columns // 2
+    with Image.open(source) as original:
+        avatar = ImageOps.exif_transpose(original).convert("RGBA")
+        background = Image.new("RGBA", avatar.size, profile["palette"]["background"])
+        background.alpha_composite(avatar)
+        square = ImageOps.fit(background.convert("RGB"), (columns, columns),
+                              method=Image.Resampling.LANCZOS)
+        pixels = square.resize((columns, row_count), Image.Resampling.LANCZOS)
+    luminance = ImageOps.autocontrast(ImageOps.grayscale(pixels), cutoff=1)
     rows = []
-    for row in range(7):
-        line = "   ".join(GLYPHS[letter][row] for letter in "K22")
-        rows.extend(["".join("##" if cell == "#" else "  " for cell in line)] * 2)
+    for y in range(row_count):
+        cells = []
+        for x in range(columns):
+            level = (luminance.getpixel((x, y)) / 255) ** 0.7
+            glyph = ASCII_RAMP[round(level * (len(ASCII_RAMP) - 1))]
+            # Lift the ink brightness for a dark terminal while retaining
+            # the orange fur, blue background, and other source-image colors.
+            rgb = pixels.getpixel((x, y))
+            ink = [min(255, round((48 + 207 * (channel / 255) ** 0.8) / 8) * 8)
+                   for channel in rgb]
+            color = "#" + "".join(f"{channel:02x}" for channel in ink)
+            cells.append((glyph, color))
+        rows.append(cells)
     return rows
+
+
+def render_portrait(rows, x, y, width):
+    """Draw real colored text, with no embedded raster or remote image."""
+    columns = len(rows[0])
+    line_height = width / len(rows)
+    font_size = width / columns / 0.6
+    out = [f'<g font-size="{font_size:.3f}" font-weight="600" xml:space="preserve">']
+    for index, row in enumerate(rows):
+        spans = []
+        previous_color = None
+        run = ""
+        for glyph, color in row:
+            if color != previous_color and run:
+                spans.append(f'<tspan fill="{previous_color}">{html.escape(run)}</tspan>')
+                run = ""
+            run += glyph
+            previous_color = color
+        spans.append(f'<tspan fill="{previous_color}">{html.escape(run)}</tspan>')
+        baseline = y + (index + 0.8) * line_height
+        out.append(f'<text x="{x}" y="{baseline:.3f}" textLength="{width}" '
+                   f'lengthAdjust="spacingAndGlyphs">' + "".join(spans) + '</text>')
+    out.append('</g>')
+    return "\n".join(out)
 
 
 def text(x, y, value, color, size=18, weight=400, extra=""):
@@ -49,7 +101,7 @@ def profile_fields(profile):
     ]
 
 
-def render_svg(profile, mobile=False):
+def render_svg(profile, portrait, mobile=False):
     p = profile["palette"]
     width = 480 if mobile else 1200
     # Wrap long values before sizing the window, including later profile edits.
@@ -63,13 +115,13 @@ def render_svg(profile, mobile=False):
         for index, line in enumerate(textwrap.wrap(value, limit) or [""]):
             rows.append((label if index == 0 else "", line))
     line_height = 33 if mobile else 32
-    info_y = 444 if mobile else 221
-    height = max(644, info_y + len(rows) * line_height + 145)
+    info_y = 642 if mobile else 221
+    height = max(740, info_y + len(rows) * line_height + 145)
     out = [
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" '
         f'viewBox="0 0 {width} {height}" role="img" aria-labelledby="title description">',
         f'<title id="title">{html.escape(profile["name"])} | {html.escape(profile["role"])}</title>',
-        '<desc id="description">Terminal profile with a K22 ASCII monogram. '
+        '<desc id="description">' + html.escape(profile["portrait"]["description"]) + ' '
         + html.escape(". ".join(f"{field[0]}: {field[1]}" for field in profile_fields(profile) if field))
         + '</desc>',
         f'<rect width="{width}" height="{height}" rx="16" fill="{p["canvas"]}"/>',
@@ -89,16 +141,15 @@ def render_svg(profile, mobile=False):
     out.append(text(40, 109, profile["username"].lower() + "@github", p["green"], 17, 600))
     out.append(text(40, 139, "$ ./asciifetch --profile", p["text"], 17))
 
-    mark = ascii_mark()
-    mark_x, mark_y = (46, 207) if mobile else (92, 263)
-    for index, line in enumerate(mark):
-        color = p["accent"] if index < 9 else "#b77c49"
-        out.append(text(mark_x, mark_y + index * 9, line, color, 12, 600,
-                        'xml:space="preserve"'))
+    portrait_width = 360 if mobile else 400
+    portrait_x = 60 if mobile else 86
+    portrait_y = 176
+    out.append(render_portrait(portrait, portrait_x, portrait_y, portrait_width))
+    caption_y = portrait_y + portrait_width + 27
     center = 240 if mobile else 286
-    out.append(text(center, mark_y + 162, " ".join(profile["username"].upper()), p["text"], 15, 600,
+    out.append(text(center, caption_y, " ".join(profile["username"].upper()), p["text"], 15, 600,
                     'text-anchor="middle"'))
-    out.append(text(center, mark_y + 187, profile["role"].upper(), p["muted"], 11,
+    out.append(text(center, caption_y + 24, profile["role"].upper(), p["muted"], 11,
                     extra='text-anchor="middle"'))
 
     info_x = 40 if mobile else 600
@@ -106,7 +157,7 @@ def render_svg(profile, mobile=False):
         out.append(f'<path d="M558 183V{height - 140}" stroke="{p["border"]}" stroke-dasharray="3 7"/>')
         out.append(text(info_x, 186, profile["username"].lower() + "@github", p["accent"], 20, 600))
     else:
-        out.append(f'<path d="M40 413H{width - 40}" stroke="{p["border"]}"/>')
+        out.append(f'<path d="M40 611H{width - 40}" stroke="{p["border"]}"/>')
     for index, row in enumerate(rows):
         if row:
             label, value = row
@@ -140,7 +191,7 @@ def render_readme(profile):
 
 <picture>
   <source media="(max-width: 640px)" srcset="assets/profile-terminal-mobile.svg">
-  <img src="assets/profile-terminal.svg" width="100%" alt="{html.escape(profile['name'])} ({username}) — {html.escape(profile['role'])} in {html.escape(profile['location'])}. Terminal profile with a K22 ASCII monogram; skills and links below.">
+  <img src="assets/profile-terminal.svg" width="100%" alt="{html.escape(profile['name'])} ({username}) — {html.escape(profile['role'])} in {html.escape(profile['location'])}. {html.escape(profile['portrait']['description'])} Skills and links below.">
 </picture>
 
 <p align="center">
@@ -195,9 +246,13 @@ def main():
         parser.error("username must be a GitHub handle")
     if not all(re.fullmatch(r"#[0-9a-fA-F]{6}", color) for color in profile["palette"].values()):
         parser.error("palette colors must use #rrggbb")
+    try:
+        portrait = load_portrait(profile)
+    except (KeyError, ValueError, OSError) as error:
+        parser.error(str(error))
     outputs = {
-        "assets/profile-terminal.svg": render_svg(profile),
-        "assets/profile-terminal-mobile.svg": render_svg(profile, mobile=True),
+        "assets/profile-terminal.svg": render_svg(profile, portrait),
+        "assets/profile-terminal-mobile.svg": render_svg(profile, portrait, mobile=True),
         "README.md": render_readme(profile),
     }
     stale = []
