@@ -31,8 +31,27 @@ Workflow `Build terminal profile` chạy khi cấu hình hoặc script thay đ�
 các file đầu ra nếu có thay đổi. Pull request chỉ kiểm tra bản build đã cập nhật.
 Nếu repository chặn bot ghi vào `main`, chạy hai lệnh trên và commit thủ công.
 
-Các workflow đồ họa cũ được chuyển sang chạy thủ công vì README mới không
-còn dùng các ảnh đó. Các tài nguyên cũ vẫn được giữ trong repository.
+Repository chỉ dùng workflow `Build terminal profile` và hai SVG được tạo từ
+`profile.json`. Không cần token của dịch vụ ảnh hay thư viện bên ngoài.
+
+## Cấu trúc repository
+
+```text
+.github/
+  CODEOWNERS
+  workflows/profile.yml
+assets/
+  profile-terminal.svg
+  profile-terminal-mobile.svg
+docs/PROFILE.md
+scripts/build_profile.py
+profile.json
+README.md
+LICENSE
+```
+
+`CODEOWNERS` thuộc tài khoản `Kaivin22`. Toàn bộ thông tin hiển thị được cấu hình
+trong `profile.json`; monogram ASCII `K22` nằm trong script dựng SVG.
 
 ## Hiển thị
 
@@ -43,4 +62,4 @@ còn dùng các ảnh đó. Các tài nguyên cũ vẫn được giữ trong rep
   font từ bên ngoài. Font monospace sẽ dùng font có sẵn trên thiết bị.
 
 Màu terminal luôn tối ở cả giao diện sáng và tối của GitHub, theo mẫu tham khảo.
-Tên, kỹ năng và liên kết được giữ từ README cũ; không bổ sung số liệu hoặc dự án giả.
+Tên, kỹ năng và liên kết lấy từ `profile.json`; profile không dùng thống kê bên ngoài.
